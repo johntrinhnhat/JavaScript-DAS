@@ -16,24 +16,26 @@
 
 class MyArray {
   constructor() {
-    this.length = length;
+    this.length = 0;
     this.data = {};
   }
 
   get(index) { // O(1)
-    
+  
   }
 
   peek() { // O(1)
-
+    
   }
 
-  push() { // O(1)
-
+  push(item) { // O(1)
+    this.data[this.length] = item;
+    this.length++;
+    return this.length;
   }
 
   pop() { // O(1)
-
+    
   }
 
   delete(index) { // O(n)
@@ -46,5 +48,6 @@ class MyArray {
 }
 
 const newArray = new MyArray();
+newArray.push("Pizza");
 
 console.log(newArray);
