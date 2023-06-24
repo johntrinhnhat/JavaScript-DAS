@@ -42,11 +42,16 @@ class MyArray {
   }
 
   delete(index) { // O(n)
-
+    const itemDelete = this.data[index];
+    this.shiftItems(index);
   }
 
-  shiftItems() {
-
+  shiftItems(index) {
+    for (let i = index; i < this.length - 1; i++) {
+      this.data[i] = this.data[i+1];
+    }
+    delete this.data[this.length - 1]
+    this.length--;
   }
 }
 
@@ -55,7 +60,8 @@ newArray.push("Pizza");
 newArray.push("Bacon");
 newArray.push("Cheese");
 newArray.push("Lectuce");
-console.log(newArray.peek());
-console.log(newArray.get(2))
 newArray.pop();
+newArray.delete(0)
+console.log(newArray.peek());
+console.log(newArray.get(1))
 console.log(newArray);
