@@ -25,7 +25,7 @@ class MyArray {
   }
 
   peek() { // O(1)
-    
+    return this.data[this.length - 1];
   }
 
   push(item) { // O(1)
