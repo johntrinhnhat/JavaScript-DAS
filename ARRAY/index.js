@@ -35,7 +35,10 @@ class MyArray {
   }
 
   pop() { // O(1)
-    
+    const item = this.data[this.length - 1];
+    delete this.data[this.length - 1];
+    this.length--;
+    return item;
   }
 
   delete(index) { // O(n)
@@ -50,5 +53,9 @@ class MyArray {
 const newArray = new MyArray();
 newArray.push("Pizza");
 newArray.push("Bacon");
-
+newArray.push("Cheese");
+newArray.push("Lectuce");
+console.log(newArray.peek());
+console.log(newArray.get(2))
+newArray.pop();
 console.log(newArray);
