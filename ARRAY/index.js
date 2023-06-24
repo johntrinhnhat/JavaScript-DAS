@@ -1,4 +1,4 @@
-## All you MUST know about Array in Array Data Structure
+/* ## All you MUST know about Array in Array Data Structure
 
 1. Array is a collection of items which have same value types.
 
@@ -8,7 +8,7 @@
 
 4. Array are recommended when you know exactly how many elements required beforehand.
 
-5. Array is a linear data structure.
+5. Array is a linear data structure. */
 
 
 
@@ -21,7 +21,7 @@ class MyArray {
   }
 
   get(index) { // O(1)
-  
+    return this.data[index];
   }
 
   peek() { // O(1)
@@ -49,5 +49,6 @@ class MyArray {
 
 const newArray = new MyArray();
 newArray.push("Pizza");
+newArray.push("Bacon");
 
 console.log(newArray);
