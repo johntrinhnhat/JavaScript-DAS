@@ -15,7 +15,12 @@ class HashTable {
 
     //hash function
     _hash(key) { 
-
+        let hash = 0;
+        for (let i = 0; i < key.length; i++) {
+            hash = (hash + key.charCodeAt(i) * i) % this.data.length;
+            console.log(hash)
+        }
+        return hash;
     }
 
     set(key, value) {
@@ -23,9 +28,10 @@ class HashTable {
     }
 
     get(key) {
-        
+
     }
 }
 
-const hashTable = new HashTable();
+const hashTable = new HashTable(100);
+hashTable._hash("banana");
 console.log(hashTable)
