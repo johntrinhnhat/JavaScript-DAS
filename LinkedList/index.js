@@ -12,23 +12,22 @@
 
 // ---------- Linked Lists Data Structure ----------
 
+// 100 --> 200 --> 250 --> 300
+
 class Node {
-  constructor() {
+  constructor(value) {
     this.value = value;
-    this.pointer = null;
+    this.next = null;
   }
 }
 
 class LinkedList {
   constructor(value) {
-    this.head = {
-      value: value,
-      next: null,
-    };
+    this.head = new Node(value);
     this.tail = this.head;
     this.length = 1;
   }
 }
 
-const linkedList = new LinkedList(100);
-console.log(linkedList);
+const myLinkedList = new LinkedList(100);
+console.log(myLinkedList);
